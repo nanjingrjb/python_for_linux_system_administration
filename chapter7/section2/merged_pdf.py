@@ -46,9 +46,10 @@ def insertOne2End(insertpdfname=".\\end.pdf"):
         with open(pdf, 'rb') as first_obj:
             merger.append(first_obj)
         with open(insertpdfname, 'rb') as sec_obj:
-            reader = PyPDF2.PdfReader(sec_obj)
-            merger.append(fileobj=sec_obj, pages=(0, len(reader.pages)))
-            newpdf =pdf[0:-5]+"_add.pdf"
+            #reader = PyPDF2.PdfReader(sec_obj)
+            #merger.append(fileobj=sec_obj, pages=(0, len(reader.pages)))
+            merger.append(sec_obj)
+            newpdf =pdf[0:-4]+"_add.pdf"
             with open(newpdf, 'wb') as f:
                 merger.write(f)
 
