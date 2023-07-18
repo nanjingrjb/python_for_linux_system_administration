@@ -5,7 +5,10 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
+
+#建立浏览器信息
 driver = webdriver.Edge()
+#输入网址
 driver.get("http://www.baidu.com")
 
 #得到百度输入框
