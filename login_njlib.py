@@ -38,13 +38,7 @@ def login_yzm():
     #采用输入加属性的办法来实现，其中
     text_label =driver.find_element(By.XPATH,'//a[@href="#tabs-2"]')
     #选择点击
-<<<<<<< HEAD
-    ac=ActionChains(driver)
-    #点击登录按钮
-    ac.click(text_label).perform()
-=======
     text_label.click()
->>>>>>> 03b202602d7b4adf84970daeffe544ff445dade8
 
      #采用输入加属性的办法来实现，其中
     text_label =driver.find_element(By.XPATH,'//input[@name="phone"]')
@@ -54,18 +48,6 @@ def login_yzm():
     #text_label =driver.find_element(By.XPATH,'//a[@href="javascript:void(0);"]')
     text_label=driver.find_element(By.CLASS_NAME,'send-btn-link')
     #选择点击
-<<<<<<< HEAD
-    ac.click(text_label).perform()
-    time.sleep(2)
-    text_label =driver.find_element(By.XPATH,'//input[@name="smscode"]')
-    code=input("输入校验码")
- 
-    text_label.send_keys(str(code))
-    time.sleep(2)
-
-    #点击登录按钮
-    ac.click(text_label).perform()
-=======
     text_label.click()
     time.sleep(2)
     val=input("input digit res")
@@ -78,26 +60,17 @@ def login_yzm():
     text_label.click()
 
 
->>>>>>> 03b202602d7b4adf84970daeffe544ff445dade8
      #捕捉登录按钮
     login_butt =driver.find_element(By.XPATH,'//input[@type="button"]')
     ac=ActionChains(driver)
     #点击登录按钮
     ac.click(login_butt).perform()
 
-<<<<<<< HEAD
-    time.sleep(100)
-
-if __name__=='__main__':
-    login_sj()
-    #login_yzm()
-=======
     time.sleep(20)
 
 if __name__=='__main__':
     #login_sj()
     login_yzm()
->>>>>>> 03b202602d7b4adf84970daeffe544ff445dade8
 
 
 
